@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XG8MRQ7KXY"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatuador en Cali - Profesional Especializado en Arte Corporal</title>
+    <meta name="description"
+        content="Tatuador profesional en Cali. Maestro en estilos realistas, clásicos, geométricos y diseños únicos personalizados. Estudio certificado con metodologías modernas. ¡Reserva tu cita!">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Bebas+Neue:wght@400&family=Bangers&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animaciones */
+        @keyframes neonGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+            }
+
+            50% {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFA500;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes floatingAnimation {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Navegación */
+        nav {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 20, 0.95));
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid #FFD700;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: url('logo.png') center/contain no-repeat;
+            border: 3px solid #FFD700;
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+            filter: drop-shadow(0 0 10px #FFD700);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Partículas de fondo */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #FFD700;
+            animation: floatingAnimation 6s infinite linear;
+            opacity: 0.3;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            animation: slideInLeft 1s ease-out;
+            z-index: 2;
+            padding-top: 4rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            color: #FFD700;
+            margin-bottom: 1.5rem;
+            /*animation: neonGlow 2s infinite alternate;*/
+            line-height: 1.1;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
+            color: #000;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.6);
+            animation: pulse 0.5s;
+        }
+
+        /* Carrusel de Videos */
+        .video-carousel {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            animation: slideInRight 1s ease-out;
+            perspective: 1000px;
+        }
+
+        .video-item {
+            width: 160px;
+            height: 284px;
+            border-radius: 20px;
+            border: 3px solid #FFD700;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            transform-style: preserve-3d;
+        }
+
+        .video-item:hover {
+            transform: rotateY(5deg) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.5);
+            border-color: #FFA500;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(255, 215, 0, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-item:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 215, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 1.5rem;
+        }
+
+        /* Galería */
+        .gallery {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+        }
+
+        .gallery h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 3.5rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: neonGlow 3s infinite alternate;
+            letter-spacing: 3px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 15px;
+            border: 3px solid #FFD700;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s;
+            animation: fadeInUp 0.8s ease-out;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotateZ(2deg);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            border-color: #FFA500;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(255, 215, 0, 0.3));
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFD700;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Secciones de Servicios */
+        .services {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-section {
+            margin-bottom: 5rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 165, 0, 0.05));
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .service-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            animation: floatingAnimation 8s infinite linear;
+            pointer-events: none;
+        }
+
+        .service-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.2);
+            border-color: #FFD700;
+        }
+
+        .service-section h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.8rem;
+            color: #FFD700;
+            margin-bottom: 2rem;
+            animation: neonGlow 4s infinite alternate;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-section p {
+            color: #ccc;
+            margin-bottom: 2.5rem;
+            text-align: justify;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .ver-mas-btn {
+            background: transparent;
+            border: 3px solid #FFD700;
+            color: #FFD700;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .ver-mas-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .ver-mas-btn:hover::before {
+            left: 0;
+        }
+
+        .ver-mas-btn:hover {
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Ubicación */
+        .ubicacion {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), transparent);
+        }
+
+        .ubicacion h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 3.5rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: neonGlow 3s infinite alternate;
+            letter-spacing: 3px;
+        }
+
+        .ubicacion-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .info-contacto {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.4s;
+        }
+
+        .info-contacto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .info-contacto h3 {
+            color: #FFD700;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .info-contacto p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-contacto a {
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .info-contacto a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid #FFD700;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.4s;
+        }
+
+        .map-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #111, #000);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 2px solid #FFD700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 8rem;
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .video-carousel {
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 1rem 0;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ubicacion-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+            }
+
+            .service-section {
+                padding: 2rem;
+            }
+
+            .service-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tatuador Profesional Medellín",
+        "image": "https://tatuadorcali.dondeseria.com/logo.png",
+        "description": "Tatuador profesional en Medellín especializado en tatuajes realistas, tradicionales y diseños personalizados.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tv. 39A #72-68",
+            "addressLocality": "Medellín",
+            "addressRegion": "Antioquia",
+            "addressCountry": "CO"
+        },
+        "telephone": "+573006586109",
+        "url": "https://example.com",
+        "sameAs": [
+            "https://instagram.com/fry_granado"
+        ],
+        "openingHours": [
+            "Mo-Sa 10:00-20:00"
+        ],
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Tatuajes",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Tatuajes Realistas"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Tatuajes Tradicionales"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+    <!-- Partículas de fondo -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#galeria">GALERÍA</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#ubicacion">UBICACIÓN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Tatuador Cali</h1>
+            <p>Arte permanente en tu piel con más de 8 años de experiencia. Especializado en tatuajes realistas,
+                tradicionales y diseños únicos que cuentan tu historia. Técnicas avanzadas, equipos esterilizados y un
+                ambiente profesional te esperan en el corazón de Laureles.</p>
+            <a href="https://wa.me/573006586109?text=Hola,%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje"
+                class="cta-button" target="_blank">
+                📱 AGENDAR CITA POR WHATSAPP
+            </a>
+        </div>
+        <div class="video-carousel">
+            <div class="video-item">
+                <video src="../Tatuajes cali 1.mp4" muted loop autoplay></video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+            <div class="video-item">
+                <video src="../Tatuajes cali 2.mp4" muted loop autoplay></video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+            <div class="video-item">
+                <video src="../Tatuajes cali 3.mp4" muted loop autoplay></video>
+                <div class="video-overlay">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_001.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_002.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_003.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_004.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_005.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_006.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_007.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_008.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_009.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_010.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_011.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../imagenes/tatuajes_cali_012.webp" alt="Tatuaje realista">
+                <div class="gallery-overlay">REALISTA</div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services">
+        <!-- Estudio de Tatuajes -->
+        <div class="service-section">
+            <h2>Tienda de Tatuajes</h2>
+            <!-- EXACTAMENTE 300 palabras -->
+            <p>Nuestro centro de tatuajes en Cali simboliza la excelencia absoluta del arte sobre piel profesional,
+                ubicado estratégicamente en el próspero distrito de Laureles-Estadio. Las instalaciones fueron planeadas
+                cuidadosamente para crear una experiencia única, integrando tecnología avanzada con un espacio creativo
+                que transmite confianza y relajación a cada persona que nos visita. El lugar cuenta con múltiples áreas
+                de trabajo perfectamente equipadas, cada una diseñada con principios ergonómicos para asegurar el
+                comfort tanto del artista como del cliente durante sesiones que pueden durar varias horas seguidas.
+                Manejamos solamente equipos de esterilización de primer nivel, incluyendo autoclaves certificadas que
+                eliminan por completo cualquier riesgo de contaminación cruzada. Nuestro enfoque en la seguridad se
+                aplica a todos los procesos, desde la preparación del espacio de trabajo hasta el cuidado posterior al
+                tatuaje. Las tintas que utilizamos son importadas de fabricantes reconocidos a nivel mundial, todas
+                certificadas por organismos de salud reguladores, garantizando colores brillantes, durabilidad superior
+                y total compatibilidad con distintos tipos de piel. El proceso artístico comienza con una consulta
+                personalizada donde exploramos las ideas del cliente, evaluamos la viabilidad técnica del diseño y
+                ofrecemos consejos expertos sobre ubicación, dimensiones y estilo más apropiado. Este enfoque consultivo
+                garantiza que cada tatuaje no solo sea estéticamente extraordinario, sino también significativo y
+                permanente. También brindamos seguimiento completo durante el período de cicatrización, incluyendo
+                productos especializados e instrucciones detalladas para asegurar resultados perfectos.</p>
+            <a href="/tienda-tatuajes-cali.html" class="ver-mas-btn">VER MÁS</a>
+        </div>
+
+        <!-- Piercing de Orejas -->
+        <div class="service-section">
+            <h2>Tienda de Piercing Para el Cuerpo</h2>
+            <!-- EXACTAMENTE 350 palabras -->
+            <p>Nuestros servicios de piercing especializado en Cali fusionan técnica profesional, seguridad máxima y
+                resultados visualmente excepcionales. Si bien nuestro enfoque primordial son los tatuajes, también
+                brindamos servicios complementarios que perfeccionan el arte corporal, especialmente tatuajes en la zona
+                del oído que requieren conocimiento anatómico avanzado de esta sensible región del cuerpo humano.
+                Aplicamos técnicas de precisión creadas específicamente para el área de las orejas, considerando
+                factores como espesor del cartílago, circulación sanguínea y patrones de cicatrización únicos de cada
+                persona. Nuestro método profesional abarca evaluación completa de la anatomía del oído para determinar
+                las mejores posiciones para tatuajes que complementen la estructura natural de cada oreja. Los
+                procedimientos se ejecutan con herramientas completamente esterilizadas, siguiendo protocolos médicos
+                estrictos que reducen al mínimo cualquier posibilidad de infección o complicaciones futuras. Ofrecemos
+                orientación completa sobre el cuidado posterior, incluyendo productos especializados para la limpieza y
+                cicatrización perfecta. La experiencia incluye consulta inicial donde analizamos opciones de diseño,
+                posición precisa y expectativas realistas sobre el proceso de sanación. Nuestro conocimiento anatómico
+                nos permite desarrollar diseños que honren las características individuales de cada cliente, asegurando
+                resultados que se integren naturalmente con la estructura facial. Además, proporcionamos seguimiento
+                personalizado durante las primeras semanas después del procedimiento, garantizando que la cicatrización
+                avance adecuadamente. Los materiales empleados cumplen con estándares internacionales de
+                biocompatibilidad, eliminando riesgos de reacciones alérgicas. Nuestro compromiso trasciende el
+                procedimiento inicial, manteniéndonos disponibles para resolver cualquier consulta que pueda surgir
+                durante el proceso de cicatrización, asegurando resultados perfectos y duraderos que superen las
+                expectativas de nuestros clientes más exigentes.</p>
+            <a href="/tienda-piercings-para-el-cuerpo-cali.html" class="ver-mas-btn">VER MÁS</a>
+        </div>
+        <!-- Tienda de Piercings y Tatuajes -->
+        <div class="service-section">
+            <h2>Tienda de Piercings y Tatuajes</h2>
+            <!-- EXACTAMENTE 375 palabras -->
+            <p>Nuestro centro especializado en arte corporal en Cali funciona como un hub integral dedicado al tatuaje
+                profesional, donde se encuentran creatividad, calidad superior y experiencia individualizada. Aunque nos
+                especializamos exclusivamente en tatuajes, utilizamos esta categoría para brindar servicios de tatuajes
+                artísticos y creativos que superan los diseños convencionales. Nuestro espacio de exhibición muestra una
+                extraordinaria colección de diseños originales que incluye desde arte moderno hasta creaciones
+                fantásticas, cada pieza cuidadosamente creada por nuestro equipo de artistas especializados. El espacio
+                fue concebido para fomentar creatividad, con exhibiciones cambiantes que presentan trabajos actuales,
+                bocetos en proceso y colaboraciones artísticas únicas. Brindamos servicios de diseño personalizado donde
+                colaboramos íntimamente con cada cliente para crear piezas únicas que expresen su personalidad, historia
+                y visión artística individual. Este proceso creativo abarca múltiples sesiones de boceteo, refinamiento
+                de ideas y adaptación técnica para garantizar resultados extraordinarios. Nuestro portafolio incluye
+                estilos variados como ilustración moderna, arte abstracto, mandalas detallados y diseños ornamentales
+                elaborados. Cada proyecto recibe dedicación personalizada, desde la conceptualización inicial hasta la
+                realización final, garantizando que cada tatuaje sea una obra de arte única e irrepetible. Empleamos
+                técnicas avanzadas de sombreado, trabajo de líneas y aplicación de color que permiten generar efectos
+                visuales impactantes y texturas realistas. El ambiente del centro integra profesionalismo con
+                creatividad, generando un espacio donde los clientes se sienten seguros explorando ideas innovadoras y
+                conceptos vanguardistas. Ofrecemos asesoramiento experto sobre tendencias actuales en arte corporal,
+                técnicas novedosas y posibilidades creativas que muchos clientes no habían contemplado anteriormente.
+                Nuestro enfoque educativo abarca explicaciones completas sobre cada técnica, tiempo de realización y
+                cuidados específicos para diferentes tipos de diseños artísticos, asegurando que nuestros clientes tomen
+                decisiones completamente informadas sobre sus proyectos de arte corporal.</p>
+            <a href="/tienda-piercings-tatuajes-cali.html" class="ver-mas-btn">VER MÁS</a>
+        </div>
+
+        <!-- Tienda de Suministros para Tatuajes -->
+        <div class="service-section">
+            <h2>Tienda de Suministros para Tatuajes en Medellín</h2>
+            <!-- EXACTAMENTE 400 palabras -->
+            <p>Nuestro dominio en técnicas avanzadas de tatuaje en Cali se refleja en servicios de arte corporal con
+                metodologías especializadas y de vanguardia que demandan conocimiento profundo de equipos, materiales y
+                técnicas específicas del arte corporal profesional. Aunque la categoría hace referencia a suministros,
+                nosotros la entendemos como servicios de tatuajes que emplean técnicas especializadas y equipamiento de
+                última tecnología para obtener resultados extraordinarios. Manejamos técnicas avanzadas como
+                puntillismo, donde cada punto se ubica estratégicamente para generar gradaciones perfectas y texturas
+                complejas que dan vida a diseños geométricos intrincados. El trabajo lineal es otra de nuestras
+                especialidades, requiriendo pulso estable y conocimiento técnico para producir líneas perfectamente
+                uniformes que definen contornos exactos y detalles refinados. Nuestras técnicas de sombreado avanzado
+                incluyen métodos como sombreado en látigo, que permite transiciones fluidas entre tonos claros y
+                oscuros, creando efectos tridimensionales sorprendentes en diseños realistas. Utilizamos equipos de
+                última generación incluyendo máquinas rotativas de precisión que brindan control exacto sobre velocidad,
+                profundidad y consistencia de aplicación de tinta. Estos equipos permiten trabajar con delicadeza en
+                áreas sensibles y lograr detalles refinados que serían imposibles con equipamiento tradicional. Nuestro
+                conocimiento técnico se amplía a la selección de agujas específicas para cada técnica: configuraciones
+                de magnum para rellenos amplios, delineadores para contornos precisos y sombreadores para gradaciones
+                perfectas. Cada herramienta se elige cuidadosamente según los requerimientos específicos del diseño y la
+                técnica a aplicar. Ofrecemos también servicios especializados de restauración y retoque de tatuajes
+                antiguos, utilizando técnicas específicas para revivir colores desvanecidos, corregir líneas irregulares
+                y mejorar detalles perdidos por el tiempo. Este proceso requiere análisis técnico minucioso del tatuaje
+                original, planificación cuidadosa y ejecución experta para lograr resultados que superen la calidad
+                original. Nuestro método técnico incluye evaluación de la piel, selección de materiales apropiados y
+                aplicación de métodos específicos que garantizan resultados duraderos y estéticamente superiores,
+                consolidando nuestra reputación como especialistas en técnicas avanzadas de tatuaje profesional.</p>
+            <a href="/tienda-suministros-tatuajes-cali.html" class="ver-mas-btn">VER MÁS</a>
+        </div>
+    </section>
+
+    <!-- Ubicación y Contacto -->
+    <section id="ubicacion" class="ubicacion">
+        <h2>UBICACIÓN</h2>
+        <div class="ubicacion-info">
+            <div class="info-contacto" id="contacto">
+                <h3>INFORMACIÓN DE CONTACTO</h3>
+                <p><strong>📍 Dirección:</strong><br>
+                    Cl. 34a Nte. #2BN-120, Prados Norte<br>
+                    Cali, Valle del Cauca</p>
+
+                <p><strong>📱 WhatsApp:</strong><br>
+                    <a href="https://wa.me/573006586109">+57 300 6586109</a>
+                </p>
+
+                <p><strong>📸 Instagram:</strong><br>
+                    <a href="https://instagram.com/fry_granado" target="_blank">@fry_granado</a>
+                </p>
+
+                <p><strong>🕒 Horarios:</strong><br>
+                    Lunes a Sábado: 10:00 AM - 8:00 PM<br>
+                    Domingo: Con cita previa</p>
+
+                <a href="https://wa.me/573006586109?text=Hola,%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje"
+                    class="cta-button" target="_blank" style="margin-top: 2rem; display: inline-block;">
+                    AGENDAR CITA AHORA
+                </a>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.162664390834!2d-75.59601832615623!3d6.24228192636981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429a38893c163%3A0xeb2b94573ea7f9bb!2sTatuajes%20cali%20-%20Fry%20Granado!5e0!3m2!1ses!2sco!4v1753127488888!5m2!1ses!2sco"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tatuador Profesional Cali. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem; color: #FFD700;">🔥 Arte permanente que cuenta tu historia 🔥</p>
+    </footer>
+
+
+
+    <script>
+        // Efectos adicionales con JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animación de aparición progresiva
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animación
+            document.querySelectorAll('.service-section, .gallery-item, .info-contacto').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s ease-out';
+                observer.observe(el);
+            });
+
+            // Efecto parallax para partículas
+            window.addEventListener('scroll', function () {
+                const scrolled = window.pageYOffset;
+                const particles = document.querySelectorAll('.particle');
+
+                particles.forEach((particle, index) => {
+                    const speed = (index + 1) * 0.5;
+                    particle.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+
+            // Efecto de typing para el H1
+            const heroTitle = document.querySelector('.hero-content h1');
+            if (heroTitle) {
+                const text = heroTitle.textContent;
+                heroTitle.textContent = '';
+                let i = 0;
+
+                function typeWriter() {
+                    if (i < text.length) {
+                        heroTitle.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                }
+
+                setTimeout(typeWriter, 1000);
+            }
+
+            // Animación de conteo para números (si se agregan estadísticas)
+            function animateCounter(element, target) {
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 20);
+            }
+
+            // Efecto de brillo en botones CTA
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseenter', function () {
+                    this.style.animation = 'pulse 0.6s infinite';
+                });
+
+                button.addEventListener('mouseleave', function () {
+                    this.style.animation = '';
+                });
+            });
+
+            // Smooth scroll mejorado
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Preloader (opcional)
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>
